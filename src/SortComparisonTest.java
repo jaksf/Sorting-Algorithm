@@ -31,6 +31,33 @@ public class SortComparisonTest
     public void testEmpty()
     {
     }
+    
+    
+    @Test
+    public void testInsertion()
+    {
+    	
+    }
+    
+    public void testSelection()
+    {
+    	
+    }
+    
+    public void testQuick()
+    {
+    	
+    }
+    
+    public void testMergeIncursive()
+    {
+    	
+    }
+    
+    public void testMergeRecursive()
+    {
+    	
+    }
 
 
     // TODO: add more tests here. Each line of code and ech decision in Collinear.java should
