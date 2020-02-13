@@ -36,7 +36,6 @@ public class SortComparisonTest
     @Test
     public void testInsertion()
     {
-    	
     }
     
     public void testSelection()

@@ -4,7 +4,7 @@
  *  This class contains static methods that implementing sorting of an array of numbers
  *  using different sort algorithms.
  *
- *  @author
+ *  @author	Finn Jaksland
  *  @version HT 2020
  */
 
@@ -43,8 +43,19 @@
      */
     static double [] selectionSort (double a[]){
 
-         //todo: implement the sort
-    	return null;
+    	int n = a.length; 
+        for (int i = 0; i < n-1; i++) 
+        { 
+            int min = i; 
+            for (int j = i+1; j < n; j++)
+            {
+            	if (a[j] < a[min]){ min = j;} 
+            } 
+            double temp = a[min]; 
+            a[min] = a[i]; 
+            a[i] = temp; 
+        }
+    	return a;
     }//end selectionsort
 
     /**
