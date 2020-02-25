@@ -1,5 +1,15 @@
 import java.util.Arrays;
 
+
+//|Insert|Selection|MRecursive|MIterative|Quick|
+//10 Random	0.049299 | 0.0206 | 0.0398 | 0.2343 | 0.023801
+//100 Random	0.2179 | 0.3285 | 0.231801 | 0.155299 | 0.094899
+//1000 Random	11.3738 | 15.5845 | 2.1548 | 1.591599 | 1.3001
+//10000 Random	171.2345 | 41.6507 | 1.4855 | 2.9235 | 1.597199
+//10000 Nearly Ordered	1.9883 | 42.0464 | 0.7369 | 1.1503 | 0.9222
+//10000 Reversed	26.9528 | 45.691999 | 0.5498 | 0.9776 | 65.0101
+//10000 Sorted	0.0546 | 67.452101 | 0.9148 | 1.4161 | 131.4399
+
 // -------------------------------------------------------------------------
 
 /**
@@ -137,7 +147,6 @@ import java.util.Arrays;
 				int from = i;
 				int mid = i + m - 1;
 				int to = Integer.min(i + 2 * m - 1, high);
-
 				mergeSortIterativeMerge(array, temp, from, mid, to);
 			}
 		}
@@ -154,7 +163,7 @@ import java.util.Arrays;
 				temp[k++] = a[j++];
 			}
 		}
-		while (i <= mid) {
+		while (i <= mid && i < a.length) {
 			temp[k++] = a[i++];
 		}
 		for (i = from; i <= to; i++) {
